@@ -22,7 +22,7 @@ export interface AppConfig {
 export const APP_CONFIG_DEFAULTS: AppConfig = {
   companyName: 'Emergency Relief',
   pageTitle: 'Disaster Relief Helpline',
-  pageDescription: 'Emergency supply request service - Get help fast',
+  pageDescription: 'Request emergency supplies and assistance',
 
   supportsChatInput: true,
   supportsVideoInput: false,
@@ -31,9 +31,9 @@ export const APP_CONFIG_DEFAULTS: AppConfig = {
 
   logo: '/lk-logo.svg',
   accent: '#dc2626',
-  logoDark: '/lk-logo-dark.svg',
+  logoDark: '/plus.png',
   accentDark: '#ef4444',
-  startButtonText: 'Request Emergency Supplies',
+  startButtonText: 'Request Help Now',
 
   // for LiveKit Cloud Sandbox
   sandboxId: undefined,

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Room, RoomEvent, TokenSource } from 'livekit-client';
 import { AppConfig } from '@/app-config';
 import { toastAlert } from '@/components/livekit/alert-toast';
+import { getUserProfile } from '@/lib/storage';
 
 export function useRoom(appConfig: AppConfig) {
   const aborted = useRef(false);
@@ -45,6 +46,9 @@ export function useRoom(appConfig: AppConfig) {
         );
 
         try {
+          // Get user profile from local storage
+          const userProfile = getUserProfile();
+          
           const res = await fetch(url.toString(), {
             method: 'POST',
             headers: {
@@ -57,6 +61,7 @@ export function useRoom(appConfig: AppConfig) {
                     agents: [{ agent_name: appConfig.agentName }],
                   }
                 : undefined,
+              user_profile: userProfile || undefined, // Send user profile to agent
             }),
           });
           return await res.json();
