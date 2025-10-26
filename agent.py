@@ -28,7 +28,7 @@ class Assistant(Agent):
                - Type of supply
                - Specific quantity (ask if vague: "How many units/doses/people?")
                - Assess criticality automatically based on supply type
-            3. Confirm address: "I'll send this to ABC Apartments, San Jose, California. Is that correct?"
+            3. Confirm address: "I'll send this to128, 128 South Maple drive, Beverly Hills, California. Is that correct?"
             4. If address confirmed, provide timeline based on criticality
             5. Ask: "Is there anything else you need?"
 
@@ -46,7 +46,7 @@ class Assistant(Agent):
             User: "I need insulin"
             You: "I understand you need insulin. How many doses or vials do you need?"
             User: "3 vials"
-            You: "Got it. I have your address as ABC Apartments, San Jose, California Is that correct?"
+            You: "Got it. I have your address as 128 South Maple drive, Beverly Hills, California Is that correct?"
             User: "Yes"
             You: "Perfect. This is emergency priority - help will arrive within 30-60 minutes with 3 vials of insulin. Is there anything else you need?"
 
