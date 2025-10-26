@@ -31,15 +31,6 @@ export default async function Layout({ children }: LayoutProps) {
           >
             LiveKit
           </a>
-          {', '}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://groq.com"
-            className="hover:text-foreground transition-colors"
-          >
-            Groq
-          </a>
           {' and '}
           <a
             target="_blank"
